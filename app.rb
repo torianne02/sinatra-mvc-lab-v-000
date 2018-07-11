@@ -8,4 +8,8 @@ class App < Sinatra::Base
   post '/' do
     @user_phrase = params[:user_phrase]
   end
+
+  post '/piglatinize' do
+    
+  end
 end
