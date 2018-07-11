@@ -1,8 +1,8 @@
 class PigLatinizer
   attr_accessor :phrase
 
-  def initialize
-
+  def initialize(phrase = nil)
+    @phrase = phrase
   end
 
   def piglatinize(phrase)
@@ -13,7 +13,7 @@ class PigLatinizer
     consonants = alpha - vowels
     @answer = []
 
-    @text.each do |word|
+    @phrase.each do |word|
       if vowels.include?(word[0].downcase)
         @answer << word + 'way'
       elsif consonants.include?(word[0].downcase) && consonants.include?(word[1]) && consonants.include?(word[2])
